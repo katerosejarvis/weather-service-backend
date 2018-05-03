@@ -95,7 +95,9 @@ When no data is found for the date and time given the API will respond with:
 
 New Features Required
 ---------------------
-
+ 
+ - The current implementation uses dummy data, you must contact the 
+   openweathermap service to retrieve real data
  - I want the temperature in Fahrenheit, Kelvin or Celcius, how could I
    specify this in API calls? Implement.
  - Please restrict API access so it can be revoked at a later stage. If the
