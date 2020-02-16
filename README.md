@@ -155,8 +155,8 @@ following features:
 
 * Configurable units for temperature (Fahrenheit, Kelvins, etc) and Pressure
   (bars, atmospheres, tor, etc) via query string parameters.
-* Secure your service with basic auth using the user `admin` and the
-  password `secret`.
+* Secure your service with [Basic auth](https://en.wikipedia.org/wiki/Basic_access_authentication)
+  using the user `admin` and the password `secret`.
 * Cache responses for a short period of time in order to avoid making
   unnecessary requests to the 3rd party API.
 * Create a working [docker](https://www.docker.com/) container and include the
