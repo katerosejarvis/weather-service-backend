@@ -48,7 +48,7 @@ attribute in the response should match the version number in the `VERSION`
 file.
 
 ```bash
-$ curl -si http://localhost:8080/ping
+$ curl -si http://localhost:8080/ping/
 
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
@@ -117,20 +117,20 @@ When no data is found or the endpoint is invalid the service should respond
 with `404` status code and an appropriate message:
 
 ```bash
-$ curl -si http://localhost:8080/forecast/westeros
+$ curl -si http://localhost:8080/forecast/midgar/
 
 HTTP/1.1 404 Not Found
 Content-Type: application/json; charset=utf-8
 {
-    "error": "Cannot find country 'westeros'",
-    "error_code": "country_not_found"
+    "error": "Cannot find city 'midgar'",
+    "error_code": "city_not_found"
 }
 ```
 
 Similarly invalid requests should return a `400` status code:
 
 ```bash
-$ curl -si http://localhost:8080/forecast/london?at=1938-12-25
+$ curl -si http://localhost:8080/forecast/london/?at=1938-12-25
 
 HTTP/1.1 400 Bad Request
 Content-Type: application/json; charset=utf-8
